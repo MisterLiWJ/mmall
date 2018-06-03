@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-/**
+/**,
  * Created by liuyangkly on 15/10/23.,
  执行调度，主要任务由两个线程完成，交易线程（调用当面付2.0接口）和交易保障线程（轮询），具体需要做的事情
  1.当面付程序每执行完一笔交易后将交易结果保存在临时队列
