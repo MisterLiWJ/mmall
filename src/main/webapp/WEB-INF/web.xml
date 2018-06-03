@@ -45,6 +45,15 @@
     </servlet>
 
 
+    <!-- 重置Session时间的Filter -->
+    <filter>
+        <filter-name>SessionExpireFilter</filter-name>
+        <filter-class>com.mmall.controller.common.SessionExpireFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>SessionExpireFilter</filter-name>
+        <url-pattern>*.do</url-pattern>
+    </filter-mapping>
 
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
