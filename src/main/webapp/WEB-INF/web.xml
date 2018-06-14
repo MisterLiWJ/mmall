@@ -45,15 +45,26 @@
     </servlet>
 
 
-    <!-- 重置Session时间的Filter -->
+    <!-- 重置Session时间的Filter,注释掉了,使用 spring-session引入对业务侵入比较少的框架 -->
+    <!--<filter>-->
+        <!--<filter-name>SessionExpireFilter</filter-name>-->
+        <!--<filter-class>com.mmall.controller.common.SessionExpireFilter</filter-class>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+        <!--<filter-name>SessionExpireFilter</filter-name>-->
+        <!--<url-pattern>*.do</url-pattern>-->
+    <!--</filter-mapping>-->
+
+    <!-- spring-session引入 -->
     <filter>
-        <filter-name>SessionExpireFilter</filter-name>
-        <filter-class>com.mmall.controller.common.SessionExpireFilter</filter-class>
+        <filter-name>springSessionRepositoryFilter</filter-name>
+        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
     </filter>
     <filter-mapping>
-        <filter-name>SessionExpireFilter</filter-name>
+        <filter-name>springSessionRepositoryFilter</filter-name>
         <url-pattern>*.do</url-pattern>
     </filter-mapping>
+
 
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>

@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 @Slf4j
 public class CookieUtil {
     //把cookie写在指定的几级域名下面
-    private final static String COOKIE_DU_MAIN=".lidawang.com";
+    private final static String COOKIE_DU_MAIN="lidawang.com";
     //cookie名称
     private final static String COOKIE_NAME="mall_login_token";
 
