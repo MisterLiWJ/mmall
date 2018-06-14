@@ -246,7 +246,7 @@
       <version>1.16.18</version>
     </dependency>
 
-    <!-- jedis -->
+    <!-- jedis, -->
     <dependency>
       <groupId>redis.clients</groupId>
       <artifactId>jedis</artifactId>
